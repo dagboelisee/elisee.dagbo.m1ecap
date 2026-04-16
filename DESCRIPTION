@@ -1,11 +1,22 @@
 Package: elisee.dagbo.m1ecap
-Title: What the Package Does (One Line, Title Case)
+Title: Analyse de la diversite des poissons dans la Seine
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Elisee", "Dagbo", , "dagboelisee7@gmail.com", role = c("aut", "cre"))
+Description: Package permettant de filtrer, analyser et visualiser un jeu
+    de donnees open data sur la diversite des poissons dans la Seine.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
+RoxygenNote: 7.3.2
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown,
+    covr,
+    devtools
+VignetteBuilder: knitr
