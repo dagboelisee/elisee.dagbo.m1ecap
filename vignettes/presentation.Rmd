@@ -1,0 +1,23 @@
+---
+title: "Presentation du package elisee.dagbo.m1ecap"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Presentation du package elisee.dagbo.m1ecap}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(elisee.dagbo.m1ecap)
+library(dplyr)
+library(ggplot2)
+
+data("df_poissons")
+head(df_poissons)
+
+filtrer_poissons(df_poissons, espece = unique(df_poissons$ESPECE)[1])
+
+calcul_individus_par_groupe(df_poissons, groupe = "ESPECE", resume = "sum")
+
+plot_individus_par_groupe(df_poissons, groupe = "COMMUNE", resume = "sum")
+
